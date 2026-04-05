@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanRoots | Community Garden & Urban Farming Initiative</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons (as a script or CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header id="main-header">
+        <div class="container header-container">
+            <!-- Left: Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="index.html" class="nav-link active nav-dropdown-toggle">Home <i data-lucide="chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Home 1 (Default)</a></li>
+                            <li><a href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link nav-dropdown-toggle">Dashboard <i data-lucide="chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user-dashboard.html"><i data-lucide="user"></i> User Dashboard</a></li>
+                            <li><a href="admin-dashboard.html"><i data-lucide="shield"></i> Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <!-- Mobile Login Button as nav item -->
+                    <li class="nav-item mobile-login-item mobile-only">
+                        <a href="login.html" class="btn btn-primary login-btn" style="width:100%;margin-top:1.5rem;">Login</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-controls">
+                <button id="rtl-toggle" title="Switch RTL/LTR">
+                    <i data-lucide="globe"></i>
+                </button>
+                <button id="theme-toggle" title="Toggle Dark/Light Mode">
+                    <i data-lucide="sun" id="theme-icon-light"></i>
+                    <i data-lucide="moon" id="theme-icon-dark" style="display: none;"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary login-btn desktop-only">Login</a>
+                <button class="mobile-menu-toggle mobile-only" aria-label="Open menu">
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home 1 Sections (15 Sections) -->
+
+        <!-- Section 1: Centered Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-blobs">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content reveal">
+                    <span class="badge">Revitalizing Cities</span>
+                    <h1>The Future of Food is <span class="highlight">Urban and Green</span></h1>
+                    <p>Reclaiming urban spaces to build a sustainable, community-driven food future. Join thousands of
+                        urban farmers transforming concrete into lush, productive ecosystems right in the heart of the
+                        city.</p>
+                    <div class="hero-btns">
+                        <button class="btn btn-primary btn-lg">Start Growing Today</button>
+                        <button class="btn btn-outline btn-lg">Explore Local Hubs</button>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="trust-avatars">
+                            <img src="image.jpg" alt="Member 1">
+                            <img src="image.jpg" alt="Member 2">
+                            <img src="image.jpg" alt="Member 3">
+                            <div class="avatar-plus">+12k</div>
+                        </div>
+                        <p>Trusted by urbanists across 45 major cities worldwide.</p>
+                    </div>
+                </div>
+                <!-- Large centered hero image -->
+                <div class="hero-full-img reveal">
+                    <img src="image.jpg"
+                        alt="Urban Garden Hero Image" class="hero-image">
+                    <div class="img-badge"><i data-lucide="award"></i> #1 Urban Farming Platform</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Sustainability Impact Metrics -->
+        <section id="stats" class="stats-section section-padding alternate-bg">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card reveal">
+                        <div class="stat-icon-badge"><i data-lucide="map"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="85">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Verified Garden Projects</span>
+                            <p>Ecosystems built from formerly abandoned lots.</p>
+                        </div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-icon-badge"><i data-lucide="users"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="15400">0</span>
+                            <span class="stat-label">Active Pioneers</span>
+                            <p>Community members cultivating change daily.</p>
+                        </div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-icon-badge"><i data-lucide="leaf"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="28000">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Lbs Harvested Yearly</span>
+                            <p>Organic produce providing food security to families.</p>
+                        </div>
+                    </div>
+                    <div class="stat-card reveal">
+                        <div class="stat-icon-badge"><i data-lucide="globe"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-target="24">0</span>
+                            <span class="stat-label">Strategic City Partners</span>
+                            <p>Collaborating with administrations to reshape policy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Vision -->
+        <section id="vision" class="vision-section section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">Our Purpose</span>
+                    <h2>Our Vision for the Modern Urban Landscape</h2>
+                    <p>We believe that every citizen deserves access to green spaces and fresh produce. Our vision is
+                        built on three core pillars that guide every project we undertake, from the smallest balcony to
+                        the largest community farm.</p>
+                </div>
+                <div class="vision-grid">
+                    <div class="vision-card reveal">
+                        <div class="vision-icon"><i data-lucide="zap"></i></div>
+                        <h3>Regenerative Sustainability</h3>
+                        <p>Our farming techniques go beyond "sustainable." We focus on regenerative practices that
+                            actually improve soil health, increase biodiversity, and sequester carbon in the heart of
+                            the city.</p>
+                    </div>
+                    <div class="vision-card reveal">
+                        <div class="vision-icon"><i data-lucide="heart"></i></div>
+                        <h3>Social Connectivity</h3>
+                        <p>Isolation is an urban epidemic. Our gardens serve as vital social hubs where people from all
+                            walks of life come together, share knowledge, and build lasting community bonds through
+                            shared effort.</p>
+                    </div>
+                    <div class="vision-card reveal">
+                        <div class="vision-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>Nutritional Sovereignty</h3>
+                        <p>We empower communities to take control of their food sources. By providing the tools and
+                            education for urban farming, we reduce dependence on long-distance supply chains and ensure
+                            food security for all.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Flagship Urban Gardens (Improved Layout) -->
+        <section id="featured-projects" class="projects-section section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header text-center mb-lg">
+                    <span class="badge reveal">Global Impact</span>
+                    <h2 class="reveal">Our Flagship Urban Gardens</h2>
+                    <p class="reveal">Across the globe, we are pioneering new ways to grow food in the city. From
+                        high-tech vertical farms to lush community gardens, our projects are benchmarks for modern urban
+                        agricultural design and community impact.</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: Brooklyn -->
+                    <div class="project-card reveal">
+                        <div class="project-img-wrapper">
+                            <img src="image.jpg"
+                                alt="Brooklyn Rooftop Garden" class="project-img">
+                            <div class="project-tag">Flagship</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="loc"><i data-lucide="map-pin"></i> Brooklyn, NYC</span>
+                                <span class="category">Rooftop Farm</span>
+                            </div>
+                            <h3>The Sky Blossom Hub</h3>
+                            <p>A flagship 5,000 sq. ft. rooftop oasis combining hydroponic tech with organic practices.
+                                It supports 15 local families weekly with fresh, nutrient-dense vegetables and greens.
+                            </p>
+                            <a href="#" class="btn-text">Learn Case Study <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: London -->
+                    <div class="project-card reveal">
+                        <div class="project-img-wrapper">
+                            <img src="image.jpg"
+                                alt="London Community Garden" class="project-img">
+                            <div class="project-tag">Community</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="loc"><i data-lucide="map-pin"></i> London, UK</span>
+                                <span class="category">Social Garden</span>
+                            </div>
+                            <h3>River Thames Greenery</h3>
+                            <p>Located on a reclaimed riverbank, this garden utilizes rain harvesting and soil
+                                regeneration to grow rare heirloom varieties. A vital social corner for local residents.
+                            </p>
+                            <a href="#" class="btn-text">Learn Case Study <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Berlin -->
+                    <div class="project-card reveal">
+                        <div class="project-img-wrapper">
+                            <img src="image.jpg"
+                                alt="Berlin Vertical Farm" class="project-img">
+                            <div class="project-tag">Innovation</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="loc"><i data-lucide="map-pin"></i> Berlin, Germany</span>
+                                <span class="category">Vertical Tech</span>
+                            </div>
+                            <h3>Eco-Pulse Community Hub</h3>
+                            <p>Our most technologically advanced project featuring automated towers and a closed-loop
+                                aquaponics system. It functions as a blueprint for high-density food production.</p>
+                            <a href="#" class="btn-text">Learn Case Study <i data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Five-Step Green Journey (Premium Cards) -->
+        <section id="journey" class="journey-section section-padding">
+            <div class="container">
+                <div class="section-header text-center mb-lg">
+                    <span class="badge reveal">How it Works</span>
+                    <h2 class="reveal">Your Five-Step Green Journey</h2>
+                    <p class="reveal">Joining the urban farming movement is simple. We've streamlined the process to
+                        help you go from a curious city resident to a confident urban farmer with ease and professional
+                        support.</p>
+                </div>
+                <div class="journey-grid">
+                    <div class="journey-card reveal">
+                        <div class="journey-num">01</div>
+                        <h3>Locate Your Hub</h3>
+                        <p>Use our real-time interactive map to find the UrbanRoots community garden nearest to your
+                            home or office. We have hubs in nearly every major metropolitan district across the globe.
+                        </p>
+                    </div>
+                    <div class="journey-card reveal">
+                        <div class="journey-num">02</div>
+                        <h3>Select Your Role</h3>
+                        <p>We need more than just planters. Whether you're interested in hands-on cultivation, garden
+                            design, community outreach, or data management, there's a vital role for your specific skill
+                            set.</p>
+                    </div>
+                    <div class="journey-card reveal">
+                        <div class="journey-num">03</div>
+                        <h3>Onboarding Training</h3>
+                        <p>Attend our comprehensive introduction workshop. You'll learn about our regenerative
+                            practices, safety protocols, and the specific ecosystem needs of your chosen garden hub.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Multi-Layered Impact -->
+        <section id="benefits" class="benefits-section section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">The Impact</span>
+                    <h2>The Multi-Layered Impact of Urban Agriculture</h2>
+                    <p>Urban farming is more than just growing plants; it's a holistic approach to solving modern city
+                        living challenges, from environmental degradation to social isolation and health crises.</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card reveal">
+                        <div class="benefit-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>Zero-Mile Food Systems</h3>
+                        <p>By producing food exactly where it is consumed, we eliminate transport emissions and ensure
+                            that nutrients are preserved through immediate harvesting and local distribution.</p>
+                    </div>
+                    <div class="benefit-card reveal">
+                        <div class="benefit-icon">
+                            <i data-lucide="cloud"></i>
+                        </div>
+                        <h3>Urban Heat Mitigation</h3>
+                        <p>Our green canopy helps reduce the 'Urban Heat Island' effect, lowering local temperatures by
+                            up to 4&deg;C and significantly reducing cooling energy costs for surrounding buildings.</p>
+                    </div>
+                    <div class="benefit-card reveal">
+                        <div class="benefit-icon">
+                            <i data-lucide="smile"></i>
+                        </div>
+                        <h3>Enhanced Mental Resilience</h3>
+                        <p>Regular interaction with soil and greenery is clinically proven to lower cortisol levels and
+                            reduce anxiety, providing a vital therapeutic outlet in fast-paced urban environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Global Impact Map -->
+        <section id="global-map" class="map-section section-padding">
+            <div class="container">
+                <div class="map-grid">
+                    <div class="map-content reveal">
+                        <span class="badge">A Global Network</span>
+                        <h2>Our Global Urban Roots Footprint</h2>
+                        <p>We are currently active in over 15 countries across 4 continents. Our network connects
+                            thousands of urban farmers, sharing data and best practices across borders. From the dense
+                            neighborhoods of Tokyo to the sprawling districts of São Paulo, UrbanRoots is providing the
+                            framework for a resilient, community-led food future, regardless of climate or local
+                            constraints.</p>
+                        <div class="map-stats">
+                            <div class="m-stat">
+                                <strong>15+</strong>
+                                <span>Countries</span>
+                            </div>
+                            <div class="m-stat">
+                                <strong>45+</strong>
+                                <span>Major Cities</span>
+                            </div>
+                            <div class="m-stat">
+                                <strong>500+</strong>
+                                <span>Micro-hubs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-placeholder reveal">
+                        <img src="image.jpg"
+                            alt="Global Impact Map">
+                        <div class="map-dots">
+                            <div class="dot dot-1" style="top:30%; left:20%;"></div>
+                            <div class="dot dot-2" style="top:40%; left:75%;"></div>
+                            <div class="dot dot-3" style="top:60%; left:45%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 9: Sustainability Impact Metrics -->
+        <section id="sustainability-stats" class="sustainability-section section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">Measurable Impact</span>
+                    <h2>Leading the Way in Urban Sustainability</h2>
+                    <p>Our initiatives are more than just green spaces—they are data-driven environmental hubs. We
+                        measure our success through real-time sensors and community feedback, ensuring every project
+                        makes a verifiable difference.</p>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card reveal">
+                        <div class="metric-icon"><i data-lucide="wind"></i></div>
+                        <div class="metric-val">420</div>
+                        <div class="metric-label">Tons CO2 Offset Yearly</div>
+                    </div>
+                    <div class="metric-card reveal">
+                        <div class="metric-icon"><i data-lucide="droplets"></i></div>
+                        <div class="metric-val">2.5M</div>
+                        <div class="metric-label">Liters Water Recycled</div>
+                    </div>
+                    <div class="metric-card reveal">
+                        <div class="metric-icon"><i data-lucide="shopping-basket"></i></div>
+                        <div class="metric-val">85K</div>
+                        <div class="metric-label">Kilos Fresh Produce</div>
+                    </div>
+                    <div class="metric-card reveal">
+                        <div class="metric-icon"><i data-lucide="users-2"></i></div>
+                        <div class="metric-val">12K</div>
+                        <div class="metric-label">Certified Urban Farmers</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 10: Resource Hub -->
+        <section id="resources" class="resources-section section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">Resource Library</span>
+                    <h2>Empowering Your Growth</h2>
+                    <p>Access our premium library of gardening guides, technical whitepapers, and local seasonal
+                        planting calendars to ensure your urban farm thrives year-round.</p>
+                </div>
+                <div class="resources-grid reveal">
+                    <div class="resource-card">
+                        <div class="r-icon"><i data-lucide="book-open"></i></div>
+                        <span>Best Practice Guide</span>
+                        <h4>Composting in High-Density Areas</h4>
+                        <p>Learn our proprietary 'No-Odor' composting method specifically designed for balcony and
+                            rooftop environments. Turn your kitchen scraps into soil gold without bothering the
+                            neighbors.</p>
+                        <a href="#">Download PDF <i data-lucide="download"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="r-icon"><i data-lucide="thermometer"></i></div>
+                        <span>Technical Paper</span>
+                        <h4>Winter Urban Farming Resilience</h4>
+                        <p>An in-depth look at using passive solar heating and modular greenhouse frames to extend your
+                            growing season through the harshest urban winters without extra energy costs.</p>
+                        <a href="#">Read Full Paper <i data-lucide="external-link"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="r-icon"><i data-lucide="droplets"></i></div>
+                        <span>Installation Guide</span>
+                        <h4>Hydroponic Balcony Systems</h4>
+                        <p>A step-by-step blueprint for setting up high-yield hydroponic vertical towers in limited balcony spaces. Perfect for year-round harvesting with minimal water usage.</p>
+                        <a href="#">Explore Systems <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Events -->
+        <section id="events" class="events-section section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">Join Us</span>
+                    <h2>Harvest Festivals & Technical Workshops</h2>
+                    <p>Beyond gardening, we host seasonal festivals, seed swaps, and technical workshops. Find out
+                        what's happening at a hub near you this month.</p>
+                </div>
+                <div class="events-list reveal">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <strong>OCT</strong>
+                            <span>12</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Spring Seed Exchange & Social</h4>
+                            <p>Bring your heirloom seeds to trade with fellow enthusiasts. Live music, organic food
+                                stalls, and a keynote on native bee preservation. All levels welcome.</p>
+                            <span class="event-loc"><i data-lucide="map-pin"></i> Central Park Hub, 10 AM - 4 PM</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm">Register Now</button>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <strong>OCT</strong>
+                            <span>24</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Hydroponic Systems Workshop</h4>
+                            <p>A deep dive into building your own gravity-fed hydroponic tower. Materials provided for
+                                registered members. Perfect for those with limited balcony space.</p>
+                            <span class="event-loc"><i data-lucide="map-pin"></i> Berlin Innovation Center, 2 PM - 5
+                                PM</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm">Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: Direct CTA Initiative -->
+        <section id="cta" class="cta-section section-padding">
+            <div class="container text-center reveal">
+                <div class="cta-box centering-container">
+                    <span class="badge">Join the Movement</span>
+                    <h2>Ready to Reclaim the Concrete Jungle?</h2>
+                    <p class="mx-auto">Whether you have five minutes or five hours, there's a vital role for you in the
+                        urban farming movement. Your contribution fuels the growth of a more sustainable city for
+                        everyone.</p>
+                    <div class="cta-btns-row">
+                        <button class="btn btn-primary">Become a Certified Volunteer</button>
+                        <button class="btn btn-outline">Support Our Mission Financially</button>
+                    </div>
+                    <div class="cta-trust-badge">
+                        <i data-lucide="check-circle"></i>
+                        <span>100% of donations go directly to new garden infrastructure and member education.</span>
+                    </div>
+                </div>
+            </div>
+        </section>https://github.com/RITHICKSD/urban.git="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">Common Queries</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about joining the UrbanRoots initiative and starting your journey as
+                        an urban pioneer.</p>
+                </div>
+                <div class="faq-accordion reveal">
+                    <div class="faq-item">
+                        <div class="faq-title">
+                            <h4>Do I need previous agricultural experience to join?</h4>
+                            <i data-lucide="plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>Not at all. Over 60% of our active members started with zero gardening knowledge. We
+                                provide comprehensive onboarding training, digital guides, and on-site mentorship from
+                                experienced horticulturists to ensure you learn while you grow.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-title">
+                            <h4>How much time commitment is expected from volunteers?</h4>
+                            <i data-lucide="plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>We pride ourselves on flexibility. Some members commit to 2 hours every Saturday morning,
+                                while others participate once a month in our larger harvest festivals. You can manage
+                                your participation entirely through the UrbanRoots dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-title">
+                            <h4>Who actually owns the produce harvested from community gardens?</h4>
+                            <i data-lucide="plus"></i>
+                        </div>
+                        <div class="faq-content">
+                            <p>The produce is distributed according to our "Third-Way" model: One-third goes to the
+                                active volunteers of that specific hub, one-third is donated to local food banks and
+                                charity kitchens, and the final third is sold at our members-only market to fund
+                                seedlings and tools for the next season.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 14: Global Newsletter Signup -->
+        <section id="newsletter" class="newsletter-section section-padding">
+            <div class="container text-center reveal">
+                <div class="newsletter-wrapper">
+                    <div class="n-icon"><i data-lucide="mail"></i></div>
+                    <h2>The Urban Roots Insider</h2>
+                    <p>Get bi-weekly updates on new garden openings, seasonal planting tips, and exclusive invites to
+                        our community harvest dinners across the globe. Join 25,000+ urbanists today.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your corporate or personal email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                    </form>
+                    <span class="n-privacy">We respect your digital environment. Zero spam, just seeds.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 15: Global Awards & Social Proof -->
+        <section id="awards" class="awards-section section-padding alternate-bg">
+            <div class="container text-center">
+                <div class="section-header mb-lg">
+                    <h3 class="reveal" style="font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase;">
+                        Recognized Excellence in Sustainability</h3>
+                </div>
+                <div class="awards-grid reveal">
+                    <div class="award-box">
+                        <i data-lucide="award"></i>
+                        <strong>Global Sustainability Award</strong>
+                        <span>United Nations Habitat 2024</span>
+                    </div>
+                    <div class="award-box">
+                        <i data-lucide="shield-check"></i>
+                        <strong>Certified Carbon Neutral</strong>
+                        <span>FutureEarth Climate Protocol</span>
+                    </div>
+                    <div class="award-box">
+                        <i data-lucide="users-2"></i>
+                        <strong>Best Social Impact Project</strong>
+                        <span>EU Urban Innovation Fund</span>
+                    </div>
+                    <div class="award-box">
+                        <i data-lucide="leaf"></i>
+                        <strong>Eco-Innovation Gold</strong>
+                        <span>Green Design Council 2023</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <!-- Branding Column -->
+                <div class="footer-col branding-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                        </a>
+                    </div>
+                    <p>UrbanRoots is the world's leading community-driven urban farming initiative. We believe in the
+                        power of cities to feed themselves and the power of gardens to heal communities. Join us in
+                        transforming the concrete jungle, one garden at a time.</p>
+                </div>
+
+                <!-- Strategic Links Column (Part of requested 2 columns of options) -->
+                <div class="footer-options-grid">
+                    <div class="footer-col">
+                        <h4>Platform Options</h4>
+                        <ul>
+                            <li><a href="#">Explore Gardens</a></li>
+                            <li><a href="#">Start a Chapter</a></li>
+                            <li><a href="#">Garden Hub Data</a></li>
+                            <li><a href="#">Resource Library</a></li>
+                            <li><a href="#">Member Directory</a></li>
+                            <li><a href="#">Impact Reports</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Strategic Support</h4>
+                        <ul>
+                            <li><a href="#">Corporate Partners</a></li>
+                            <li><a href="#">Council Collaboration</a></li>
+                            <li><a href="#">Sustainability Grants</a></li>
+                            <li><a href="#">Media & PR Kit</a></li>
+                            <li><a href="#">Privacy Framework</a></li>
+                            <li><a href="#">Terms of Growth</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 UrbanRoots Global Initiative. All Rights Reserved. Cultivated with Love.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

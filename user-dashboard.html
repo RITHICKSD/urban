@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Urban Farming Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <!-- Dashboard Layout -->
+    <div class="dashboard-container">
+        <!-- Top Bar for Mobile -->
+        <div class="dashboard-top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                        </a>
+                    </div>
+                    <!-- Menu Toggle for Mobile -->
+                    <button class="dashboard-menu-toggle" type="button" aria-label="Toggle Menu">
+                        <i data-lucide="menu" class="icon-menu"></i>
+                        <i data-lucide="x" class="icon-close"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                    </a>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="sidebar-link active"><i data-lucide="home"></i> Dashboard Overview</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="leaf"></i> My Gardens</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="shopping-cart"></i> Orders</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="user"></i> Profile</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="settings"></i> Settings</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="help-circle"></i> Support</a></li>
+                    <li><a href="index.html" class="sidebar-link logout"><i data-lucide="log-out"></i> Logout</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="header-controls">
+                    <button id="rtl-toggle" title="Switch RTL/LTR">
+                        <i data-lucide="globe"></i>
+                    </button>
+                    <button id="theme-toggle" title="Toggle Dark/Light Mode">
+                        <i data-lucide="sun" id="theme-icon-light"></i>
+                        <i data-lucide="moon" id="theme-icon-dark" style="display: none;"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Sidebar Overlay (for mobile) -->
+        <div class="sidebar-overlay"></div>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h1>Welcome to Your Dashboard</h1>
+                    <p>Manage your urban farming activities here.</p>
+                </div>
+
+                <!-- Stat Cards Grid (6 cards) -->
+                <div class="stat-grid six-cols">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="droplets"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Water</h3>
+                            <p class="stat-value">1,240 L</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="thermometer"></i></div>
+                        <div class="stat-info">
+                            <h3>Avg Temp</h3>
+                            <p class="stat-value">26°C</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="leaf"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Plants</h3>
+                            <p class="stat-value">84</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="award"></i></div>
+                        <div class="stat-info">
+                            <h3>Harvest Yield</h3>
+                            <p class="stat-value">4.5 kg</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon alert"><i data-lucide="bell"></i></div>
+                        <div class="stat-info">
+                            <h3>Active Alerts</h3>
+                            <p class="stat-value">2</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon score"><i data-lucide="trending-up"></i></div>
+                        <div class="stat-info">
+                            <h3>Garden Score</h3>
+                            <p class="stat-value">94/100</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Grid (4 Pie Charts) -->
+                <div class="chart-grid two-cols">
+                    <div class="chart-container">
+                        <h3>Crop Distribution</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="pie-chart-1"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Soil Health (Average)</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="pie-chart-2"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Harvest Status</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="pie-chart-3"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Seasonal Growth</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="pie-chart-4"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script nonce="dashboard-icons">
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+
+</html>

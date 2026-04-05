@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | UrbanRoots Global Connectivity</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+
+    <!-- Header / Navigation (Synchronized) -->
+    <header id="main-header">
+        <div class="container header-container">
+            <!-- Left: Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="index.html" class="nav-link active nav-dropdown-toggle">Home <i data-lucide="chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Home 1 (Default)</a></li>
+                            <li><a href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link nav-dropdown-toggle">Dashboard <i data-lucide="chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user-dashboard.html"><i data-lucide="user"></i> User Dashboard</a></li>
+                            <li><a href="#"><i data-lucide="shield"></i> Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mobile-login-item mobile-only">
+                        <a href="login.html" class="btn btn-primary login-btn" style="width:100%;margin-top:1.5rem;">Login</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-controls">
+                <button id="rtl-toggle" title="Switch RTL/LTR">
+                    <i data-lucide="globe"></i>
+                </button>
+                <button id="theme-toggle" title="Toggle Dark/Light Mode">
+                    <i data-lucide="sun" id="theme-icon-light"></i>
+                    <i data-lucide="moon" id="theme-icon-dark" style="display: none;"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary login-btn desktop-only">Login</a>
+                <button class="mobile-menu-toggle mobile-only" aria-label="Open menu">
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px;">
+
+        <!-- Section 1: Contact Hero (Centered Cinematic Focus) -->
+        <section class="section-padding" style="background: var(--bg-main); text-align: center;">
+            <div class="container reveal">
+                <span class="badge" style="display: inline-block; margin-bottom: 2rem;">GLOBAL CONNECTIVITY</span>
+                <h1
+                    style="font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 2rem; width: 100%; text-align: center;">
+                    Let's Grow <span class="highlight">Together</span></h1>
+                <p
+                    style="max-width: 850px; margin: 0 auto 5rem; font-size: 1.25rem; color: var(--text-muted); line-height: 1.9; text-align: center;">
+                    Whether you are an individual pioneer, a corporate partner, or a city planner, our global hubs are
+                    standing by to assist your regenerative urban transition.</p>
+                <div class="image-box"
+                    style="aspect-ratio: 21/9; border-radius: 2rem; overflow: hidden; box-shadow: var(--shadow-xl); margin: 0 auto; max-width: 100%; border: 1px solid var(--border);">
+                    <img src="image.jpg"
+                        alt="Global Contact Hub" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Primary Channels (3-Column Grid) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="vision-grid reveal">
+                    <div class="vision-card" style="padding: 4rem 2.5rem;">
+                        <div class="vision-icon"><i data-lucide="mail"></i></div>
+                        <h3>Email Support</h3>
+                        <p style="font-weight: 700; color: var(--primary);">hello@urbanroots.org</p>
+                        <p style="font-size: 0.9rem; margin-top: 1rem;">Response within 24 business hours guaranteed.
+                        </p>
+                    </div>
+                    <div class="vision-card" style="padding: 4rem 2.5rem;">
+                        <div class="vision-icon"><i data-lucide="phone"></i></div>
+                        <h3>Voice Support</h3>
+                        <p style="font-weight: 700; color: var(--primary);">+1 (800) URBAN-ROOTS</p>
+                        <p style="font-size: 0.9rem; margin-top: 1rem;">Available Mon-Fri, 9am - 6pm EST.</p>
+                    </div>
+                    <div class="vision-card" style="padding: 4rem 2.5rem;">
+                        <div class="vision-icon"><i data-lucide="map-pin"></i></div>
+                        <h3>The Brooklyn Lab</h3>
+                        <p style="font-weight: 700; color: var(--primary);">45 Tech Hub Plaza, NY 11201</p>
+                        <p style="font-size: 0.9rem; margin-top: 1rem;">Our primary R&D headquarters and soil lab.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Direct Message Hub (Asymmetric Form Split) -->
+        <section id="contact-form" class="section-padding alternate-bg">
+            <div class="container">
+                <div class="asymmetric-grid" style="align-items: flex-start; gap: 8rem;">
+                    <div class="reveal">
+                        <span class="badge">DIRECT MESSAGE</span>
+                        <h2 style="margin: 1.5rem 0;">Tell Us About Your Vision</h2>
+                        <p style="color: var(--text-muted); line-height: 1.9; font-size: 1.15rem; margin-bottom: 3rem;">
+                            Ready to build a hub? Fill out the form below and our Strategic Operations team will reach
+                            out with a custom project outline.</p>
+
+                        <form class="contact-form-v2" style="display: flex; flex-direction: column; gap: 2rem;">
+                            <div class="split-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                <div>
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.8rem;">Full
+                                        Name</label>
+                                    <input type="text" placeholder="John Doe" required
+                                        style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--border); background: #fdfdfd;">
+                                </div>
+                                <div>
+                                    <label style="display: block; font-weight: 600; margin-bottom: 0.8rem;">Professional
+                                        Email</label>
+                                    <input type="email" placeholder="john@company.com" required
+                                        style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--border); background: #fdfdfd;">
+                                </div>
+                            </div>
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.8rem;">Inquiry
+                                    Subject</label>
+                                <select
+                                    style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--border); background: #fdfdfd;">
+                                    <option>Corporate Partnership</option>
+                                    <option>Residential Chapter Startup</option>
+                                    <option>Media & Press Inquiry</option>
+                                    <option>General Support</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; font-weight: 600; margin-bottom: 0.8rem;">Your
+                                    Message</label>
+                                <textarea rows="6" placeholder="Describe your urban agricultural project..."
+                                    style="width: 100%; padding: 1.2rem; border-radius: 0.8rem; border: 1px solid var(--border); background: #fdfdfd;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg"
+                                style="width: fit-content; padding: 1.2rem 4rem;">Transmit Inquiry</button>
+                        </form>
+                    </div>
+                    <div class="reveal">
+                        <div class="image-box"
+                            style="aspect-ratio: 1/1; border-radius: 2.5rem; overflow: hidden; box-shadow: var(--shadow-xl); border: 2px solid var(--primary-light);">
+                            <img src="image.jpg"
+                                alt="Support Desk" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Regional Hubs (Asymmetric List) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="asymmetric-grid" style="align-items: center; gap: 8rem;">
+                    <div class="reveal">
+                        <div class="image-box"
+                            style="aspect-ratio: 4/3; border-radius: 2rem; overflow: hidden; box-shadow: var(--shadow-lg);">
+                            <img src="image.jpg"
+                                alt="Regional Hubs">
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <span class="badge">REGIONAL HUBS</span>
+                        <h2 style="margin: 1.5rem 0;">Local Presence, Global Scale</h2>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 2rem; margin-top: 3rem;">
+                            <li
+                                style="display: flex; gap: 1.5rem; align-items: flex-start; padding-bottom: 2rem; border-bottom: 1px solid var(--border);">
+                                <i data-lucide="globe"
+                                    style="color: var(--primary); width: 24px; height: 24px; flex-shrink: 0;"></i>
+                                <div>
+                                    <h4 style="margin-bottom: 0.5rem;">Europe HQ (Berlin)</h4>
+                                    <p style="color: var(--text-muted); font-size: 0.95rem;">Lohmühlenbrücke 1, 12045
+                                        Berlin, Germany. Specializing in high-density edible skyscrapers.</p>
+                                </div>
+                            </li>
+                            <li style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                                <i data-lucide="globe"
+                                    style="color: var(--primary); width: 24px; height: 24px; flex-shrink: 0;"></i>
+                                <div>
+                                    <h4 style="margin-bottom: 0.5rem;">Asia-Pacific (Tokyo)</h4>
+                                    <p style="color: var(--text-muted); font-size: 0.95rem;">2 Chome-8-1 Nishishinjuku,
+                                        Tokyo 163-8001. Hub for vertical hydroponic research.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Support Tiers (Resource Style) -->
+        <section class="section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">SUPPORT TIERS</span>
+                    <h2>How Can We Service You?</h2>
+                </div>
+                <div class="resources-grid reveal">
+                    <div class="resource-card">
+                        <div class="r-icon"><i data-lucide="user"></i></div>
+                        <h4 style="margin-top: 1rem;">Member Support</h4>
+                        <p>For help with your home sensor kits, app notifications, or seasonal seed deliveries.</p>
+                        <a href="#">Help Center</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="r-icon"><i data-lucide="briefcase"></i></div>
+                        <h4 style="margin-top: 1rem;">Business Liaison</h4>
+                        <p>Strategic consulting for corporate rooftop conversions and employee wellness metrics.</p>
+                        <a href="#">Corporate Kit</a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="r-icon"><i data-lucide="megaphone"></i></div>
+                        <h4 style="margin-top: 1rem;">Press Inquiries</h4>
+                        <p>Request media assets, high-res hub images, or interviews with our strategic pioneers.</p>
+                        <a href="#">Media Assets</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Media & PR Kit (Asymmetric) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="asymmetric-grid" style="align-items: center; gap: 8rem;">
+                    <div class="reveal">
+                        <span class="badge">PRESS ROOM</span>
+                        <h2 style="margin: 1.5rem 0;">Media Assets & Resources</h2>
+                        <p style="color: var(--text-muted); line-height: 1.9; font-size: 1.15rem; margin-bottom: 3rem;">
+                            Download our official 2026 Brand Kit, featuring high-definition imagery of our global hubs
+                            and verified impact data summaries for journalistic use.</p>
+                        <div style="display: flex; gap: 1.5rem; margin-top: 2rem;">
+                            <button class="btn btn-outline"><i data-lucide="download"></i> Download Kit (45MB)</button>
+                            <button class="btn btn-outline"><i data-lucide="image"></i> Gallery Access</button>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="image-box"
+                            style="aspect-ratio: 16/9; border-radius: 2rem; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border);">
+                            <img src="image.jpg"
+                                alt="Media Kit Preview">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: FAQ Knowledge Base (2-Column Static) -->
+        <section class="section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="badge">KNOWLEDGE BASE</span>
+                    <h2>Quick Answers</h2>
+                </div>
+                <div class="faq-static-grid reveal">
+                    <div class="faq-static-card">
+                        <h3><i data-lucide="help-circle"></i> How do I start a local chapter?</h3>
+                        <p>Simply purchase an 'HUB BUILDER' subscription and our team will guide you through the initial
+                            plot audit and community recruitment.</p>
+                    </div>
+                    <div class="faq-static-card">
+                        <h3><i data-lucide="help-circle"></i> What are the water requirements?</h3>
+                        <p>Our precise hydroponic racks use 90% less water than traditional soil farming, often
+                            requiring just a single gray-water recycling unit per floor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Social Connectivity (Premium Boxed Hubs) -->
+        <section class="section-padding">
+            <div class="container reveal">
+                <div class="newsletter-box"
+                    style="background: var(--bg-main); border: 2px solid var(--border); border-radius: 3rem; padding: 5rem 2rem; text-align: center; box-shadow: var(--shadow-lg);">
+                    <span class="badge" style="margin-bottom: 2rem;">SOCIAL HUBS</span>
+                    <h2 style="margin-bottom: 4rem; font-size: clamp(2rem, 4vw, 3rem);">Connect <span
+                            class="highlight">Beyond</span> the Concrete</h2>
+                    <div style="display: flex; justify-content: center; gap: clamp(2rem, 5vw, 6rem); flex-wrap: wrap;">
+                        <!-- Facebook -->
+                        <a href="#"
+                            style="color: var(--primary); text-decoration: none; display: flex; flex-direction: column; gap: 1.5rem; align-items: center; transition: transform 0.3s ease;">
+                            <div
+                                style="width: 80px; height: 80px; background: var(--primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </div>
+                            <span
+                                style="font-weight: 700; font-size: 0.85rem; letter-spacing: 3px; color: var(--text-main);">FACEBOOK</span>
+                        </a>
+                        <!-- Twitter (X) -->
+                        <a href="#"
+                            style="color: var(--primary); text-decoration: none; display: flex; flex-direction: column; gap: 1.5rem; align-items: center; transition: transform 0.3s ease;">
+                            <div
+                                style="width: 80px; height: 80px; background: var(--primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153zM17.61 20.644h2.039L6.486 3.24H4.298l13.312 17.404z" />
+                                </svg>
+                            </div>
+                            <span
+                                style="font-weight: 700; font-size: 0.85rem; letter-spacing: 3px; color: var(--text-main);">TWITTER
+                                (X)</span>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="#"
+                            style="color: var(--primary); text-decoration: none; display: flex; flex-direction: column; gap: 1.5rem; align-items: center; transition: transform 0.3s ease;">
+                            <div
+                                style="width: 80px; height: 80px; background: var(--primary-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </div>
+                            <span
+                                style="font-weight: 700; font-size: 0.85rem; letter-spacing: 3px; color: var(--text-main);">LINKEDIN</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Visit a Hub (Full Width) -->
+        <section class="section-padding alternate-bg"
+            style="background: var(--primary); color: white; text-align: center;">
+            <div class="container reveal">
+                <h2 style="color: white; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem;">Experience the Hub
+                    in Person</h2>
+                <p style="max-width: 800px; margin: 0 auto 3rem; font-size: 1.25rem; opacity: 0.95; line-height: 1.8;">
+                    Our Brooklyn R&D Lab is open for public tours every Thursday. Come see the systems that are feeding
+                    Gotham.</p>
+                <button class="btn btn-primary btn-lg"
+                    style="background: white; color: var(--primary); min-width: 250px;">Book a Public Tour</button>
+            </div>
+        </section>
+
+        <!-- Section 10: Final Footer Signoff (Centered Connectivity Hub) -->
+        <section class="section-padding" style="text-align: center;">
+            <div class="container reveal">
+                <span class="badge" style="display: inline-block; margin-bottom: 2rem;">GROW WITH US</span>
+                <h2 style="margin-bottom: 2.5rem; text-align: center; width: 100%; font-size: clamp(2rem, 4vw, 3rem);">
+                    Ready to <span class="highlight">Transmit</span> Your Request?</h2>
+                <p
+                    style="color: var(--text-muted); max-width: 750px; margin: 0 auto 4rem; line-height: 1.9; font-size: 1.15rem; text-align: center;">
+                    UrbanRoots Global Strategic Support is standing by. We look forward to grounding your urban vision
+                    and starting our agricultural partnership.</p>
+                <a href="#contact-form" class="btn btn-primary btn-lg"
+                    style="display: inline-flex; align-items: center; gap: 1rem; border-radius: 1rem; padding: 1.5rem 3.5rem;">
+                    <i data-lucide="arrow-up-circle"></i> Back to Inquiry Form
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Synchronized) -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <!-- Branding Column -->
+                <div class="footer-col branding-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                        </a>
+                    </div>
+                    <p>UrbanRoots is the world's leading community-driven urban farming initiative. We believe in the
+                        power of cities to feed themselves and the power of gardens to heal communities. Join us in
+                        transforming the concrete jungle, one garden at a time.</p>
+                </div>
+
+                <!-- Strategic Links Column (Part of requested 2 columns of options) -->
+                <div class="footer-options-grid">
+                    <div class="footer-col">
+                        <h4>Platform Options</h4>
+                        <ul>
+                            <li><a href="#">Explore Gardens</a></li>
+                            <li><a href="#">Start a Chapter</a></li>
+                            <li><a href="#">Garden Hub Data</a></li>
+                            <li><a href="#">Resource Library</a></li>
+                            <li><a href="#">Member Directory</a></li>
+                            <li><a href="#">Impact Reports</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Strategic Support</h4>
+                        <ul>
+                            <li><a href="#">Corporate Partners</a></li>
+                            <li><a href="#">Council Collaboration</a></li>
+                            <li><a href="#">Sustainability Grants</a></li>
+                            <li><a href="#">Media & PR Kit</a></li>
+                            <li><a href="#">Privacy Framework</a></li>
+                            <li><a href="#">Terms of Growth</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 UrbanRoots Global Initiative. All Rights Reserved. Cultivated with Love.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

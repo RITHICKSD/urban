@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Urban Roots</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <!-- Dashboard Layout -->
+    <div class="dashboard-container">
+        <!-- Top Bar for Mobile -->
+        <div class="dashboard-top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                        </a>
+                    </div>
+                    <!-- Menu Toggle for Mobile -->
+                    <button class="dashboard-menu-toggle" type="button" aria-label="Toggle Menu">
+                        <i data-lucide="menu" class="icon-menu"></i>
+                        <i data-lucide="x" class="icon-close"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="admin-dashboard.html">
+                        <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                    </a>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="sidebar-link active"><i data-lucide="layout-dashboard"></i> Admin Overview</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="users"></i> User Management</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="layers"></i> Garden Projects</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="package"></i> Inventory Control</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="shopping-bag"></i> Global Orders</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="file-text"></i> System Reports</a></li>
+                    <li><a href="#" class="sidebar-link"><i data-lucide="settings"></i> Control Panel</a></li>
+                    <li><a href="index.html" class="sidebar-link logout"><i data-lucide="log-out"></i> Logout</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="header-controls">
+                    <button id="rtl-toggle" title="Switch RTL/LTR">
+                        <i data-lucide="globe"></i>
+                    </button>
+                    <button id="theme-toggle" title="Toggle Dark/Light Mode">
+                        <i data-lucide="sun" id="theme-icon-light"></i>
+                        <i data-lucide="moon" id="theme-icon-dark" style="display: none;"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Sidebar Overlay (for mobile) -->
+        <div class="sidebar-overlay"></div>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h1>Admin Command Center</h1>
+                    <p>Global oversight of UrbanRoots operations.</p>
+                </div>
+
+                <!-- Admin KPI Grid -->
+                <div class="stat-grid six-cols">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="users-2"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Users</h3>
+                            <p class="stat-value">12,450</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon score"><i data-lucide="trending-up"></i></div>
+                        <div class="stat-info">
+                            <h3>Monthly Growth</h3>
+                            <p class="stat-value">+18%</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="leaf"></i></div>
+                        <div class="stat-info">
+                            <h3>Active Gardens</h3>
+                            <p class="stat-value">3,120</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="dollar-sign"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Revenue</h3>
+                            <p class="stat-value">$142.5K</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon alert"><i data-lucide="alert-triangle"></i></div>
+                        <div class="stat-info">
+                            <h3>Pending Tasks</h3>
+                            <p class="stat-value">12</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="activity"></i></div>
+                        <div class="stat-info">
+                            <h3>System Health</h3>
+                            <p class="stat-value">100%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Admin Analytical Charts -->
+                <div class="chart-grid two-cols">
+                    <div class="chart-container">
+                        <h3>User Growth Distribution</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="admin-pie-1"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Resource Allocation</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="admin-pie-2"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Project Success Rate</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="admin-pie-3"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Revenue by Region</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="admin-pie-4"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Admin-specific chart initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof Chart !== 'undefined') {
+                const initAdminChart = (id, labels, data) => {
+                    const ctx = document.getElementById(id);
+                    if (!ctx) return;
+                    
+                    const adminColors = ['#2d5a27', '#d4af37', '#4caf50', '#8d6e63', '#64b5f6', '#ffb74d'];
+
+                    new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                data: data,
+                                backgroundColor: adminColors,
+                                borderWidth: 1,
+                                borderColor: 'transparent'
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom',
+                                    labels: { font: { size: 10 }, padding: 8, boxWidth: 10 }
+                                }
+                            }
+                        }
+                    });
+                };
+
+                initAdminChart('admin-pie-1', ['Organic', 'Social', 'Direct', 'Referral'], [40, 25, 20, 15]);
+                initAdminChart('admin-pie-2', ['Main Site', 'Mobile App', 'Seed Store', 'Support'], [35, 45, 15, 5]);
+                initAdminChart('admin-pie-3', ['Completed', 'Ongoing', 'Maintenance', 'Late'], [60, 25, 10, 5]);
+                initAdminChart('admin-pie-4', ['North', 'South', 'East', 'West'], [30, 20, 25, 25]);
+            }
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

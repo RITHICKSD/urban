@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About UrbanRoots | Reclaiming the Concrete Jungle</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+
+    <!-- Header / Navigation (Synchronized) -->
+    <header id="main-header">
+        <div class="container header-container">
+            <!-- Left: Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item dropdown">
+                        <a href="index.html" class="nav-link active nav-dropdown-toggle">Home <i data-lucide="chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">Home 1 (Default)</a></li>
+                            <li><a href="home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link nav-dropdown-toggle">Dashboard <i data-lucide="chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="user-dashboard.html"><i data-lucide="user"></i> User Dashboard</a></li>
+                            <li><a href="#"><i data-lucide="shield"></i> Admin Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mobile-login-item mobile-only">
+                        <a href="login.html" class="btn btn-primary login-btn" style="width:100%;margin-top:1.5rem;">Login</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-controls">
+                <button id="rtl-toggle" title="Switch RTL/LTR">
+                    <i data-lucide="globe"></i>
+                </button>
+                <button id="theme-toggle" title="Toggle Dark/Light Mode">
+                    <i data-lucide="sun" id="theme-icon-light"></i>
+                    <i data-lucide="moon" id="theme-icon-dark" style="display: none;"></i>
+                </button>
+                <a href="login.html" class="btn btn-primary login-btn desktop-only">Login</a>
+                <button class="mobile-menu-toggle mobile-only" aria-label="Open menu">
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px;">
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="asymmetric-grid" style="align-items: center;">
+                    <div class="cta-text reveal">
+                        <span class="badge">OUR MISSION</span>
+                        <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 2rem;">The
+                            Seed of a <span class="highlight">Global Revolution</span></h1>
+                        <p style="font-size: 1.2rem; color: var(--text-muted); line-height: 1.8;">UrbanRoots started as
+                            a single rooftop project in NYC. We've now blossomed into a worldwide collective, reclaiming
+                            thousands of vacant city plots to feed our communities and heal our planet.</p>
+                    </div>
+                    <div class="cta-img reveal">
+                        <div class="image-box"
+                            style="aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; border: 12px solid var(--primary-light); box-shadow: var(--shadow-lg);">
+                            <img src="image.jpg"
+                                alt="Urban Garden Pioneer" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Our Story (History) -->
+        <section id="story" class="section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="badge">OUR STORY</span>
+                    <h2>From a Single Patch of Soil</h2>
+                </div>
+                <div class="asymmetric-grid" style="grid-template-columns: 1fr 1.2fr; align-items: flex-start;">
+                    <div class="reveal" style="margin-top: 1.5rem;">
+                        <div class="image-box" style="aspect-ratio: 4/3; box-shadow: var(--shadow-lg);">
+                            <img src="image.jpg"
+                                alt="Original Hub">
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.8;">
+                            In 2018, our founder looked at an abandoned lot in Brooklyn and saw an opportunity. Not for
+                            a new development, but for a new kind of community. We spent the first two years testing
+                            regenerative soil techniques in high-density urban environments.</p>
+                        <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.8;">Today, we provide the
+                            platform, the technology, and the seeds for thousands of urban pioneers to do the same. We
+                            aren't just growing food; we're growing resilience, connectivity, and a sustainable future
+                            for the next generation of city dwellers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Core Values (3-Column Icons Centered) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">CORE VALUES</span>
+                    <h2>The Principles that Guide Us</h2>
+                </div>
+                <div class="vision-grid reveal">
+                    <div class="vision-card">
+                        <div class="vision-icon"><i data-lucide="zap"></i></div>
+                        <h3>Radical Efficiency</h3>
+                        <p>We optimize every drop of water and every watt of solar energy to produce maximum yields in
+                            minimum urban footprints.</p>
+                    </div>
+                    <div class="vision-card">
+                        <div class="vision-icon"><i data-lucide="users"></i></div>
+                        <h3>Social Equity</h3>
+                        <p>We ensure that fresh, organic produce reaches every community member, regardless of their
+                            economic background or location.</p>
+                    </div>
+                    <div class="vision-card">
+                        <div class="vision-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>Open Transparency</h3>
+                        <p>Our data and blueprints are open-source. We believe that to save the planet, we must share
+                            our knowledge freely.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Global Impact Metrics (Number Counters) -->
+        <section class="section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">OUR IMPACT</span>
+                    <h2>Measurable Success Across Our Hubs</h2>
+                    <p>We don't just plant seeds; we track data. Every garden is a node in a global network focused on
+                        climate resilience and community nutrition.</p>
+                </div>
+                <div class="resources-grid reveal">
+                    <div class="resource-card">
+                        <div class="r-icon"><i data-lucide="globe"></i></div>
+                        <h4 class="stat-number" data-target="45">0</h4>
+                        <span
+                            style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; display: block;">Active
+                            City Partnerships</span>
+                        <p>Working in collaboration with municipal governments to turn urban rot into public edible
+                            spaces.</p>
+                    </div>
+                    <div class="resource-card">
+                        <div class="r-icon"><i data-lucide="leaf"></i></div>
+                        <h4 class="stat-number" data-target="12000">0</h4>
+                        <span
+                            style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; display: block;">Tons
+                            of CO2 Sequestered</span>
+                        <p>Our regenerative soil mixtures capture more carbon than traditional greenery, actively
+                            healing the city's air.</p>
+                    </div>
+                    <div class="resource-card">
+                        <div class="r-icon"><i data-lucide="award"></i></div>
+                        <h4 class="stat-number" data-target="28">0</h4>
+                        <span
+                            style="font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; display: block;">International
+                            Design Awards</span>
+                        <p>Recognized globally for architectural innovation and social impact in urban infrastructure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Global Team (High Density) -->
+        <section id="team" class="section-padding">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">OUR TEAM</span>
+                    <h2>Meet the Pioneers</h2>
+                </div>
+                <div class="resources-grid reveal">
+                    <!-- Member 1: Sarah Chen -->
+                    <div class="resource-card">
+                        <div class="r-icon" style="overflow: hidden; border: 4px solid var(--primary-light);"><img
+                                src="image.jpg"
+                                style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <h4 style="margin-top: 1.5rem;">Sarah Chen</h4>
+                        <span
+                            style="color: var(--primary); font-weight: 700; font-size: 0.85rem; margin-bottom: 1rem; display: block;">CHIEF
+                            HORTICULTURALIST</span>
+                        <p>Leading our regenerative soil research across three continents to ensure high-yield
+                            sustainability.</p>
+                    </div>
+                    <!-- Member 2: Marcus Thorne -->
+                    <div class="resource-card">
+                        <div class="r-icon" style="overflow: hidden; border: 4px solid var(--primary-light);"><img
+                                src="image.jpg"
+                                style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <h4 style="margin-top: 1.5rem;">Marcus Thorne</h4>
+                        <span
+                            style="color: var(--primary); font-weight: 700; font-size: 0.85rem; margin-bottom: 1rem; display: block;">STRATEGIC
+                            OPERATIONS</span>
+                        <p>Expanding our hub network into emerging metropolitan districts with a focus on data-driven
+                            growth.</p>
+                    </div>
+                    <!-- Member 3: Elena Rossi -->
+                    <div class="resource-card">
+                        <div class="r-icon" style="overflow: hidden; border: 4px solid var(--primary-light);"><img
+                                src="image.jpg"
+                                style="width: 100%; height: 100%; object-fit: cover;"></div>
+                        <h4 style="margin-top: 1.5rem;">Elena Rossi</h4>
+                        <span
+                            style="color: var(--primary); font-weight: 700; font-size: 0.85rem; margin-bottom: 1rem; display: block;">COMMUNITY
+                            OUTREACH</span>
+                        <p>Empowering pioneers to lead their own local UrbanRoots chapters through social connectivity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Milestone Timeline (Centered) -->
+        <section class="section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">OUR JOURNEY</span>
+                    <h2>Milestones of the Revolution</h2>
+                </div>
+                <div class="events-list reveal">
+                    <div class="event-item">
+                        <div class="event-date">2018</div>
+                        <div class="event-details">
+                            <h4>The Prototype Phase</h4>
+                            <p>First rooftop garden launched in Brooklyn, NYC using solar-powered gray-water recycling.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">2020</div>
+                        <div class="event-details">
+                            <h4>European Expansion</h4>
+                            <p>Certified chapters launched in London and Berlin with the help of EU Innovation Funds.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">2024</div>
+                        <div class="event-details">
+                            <h4>Mission: 15 Countries</h4>
+                            <p>Achieved a presence in 45 major cities worldwide, providing food security to over 12k
+                                families.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Strategic Governance (Table/Grid) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="badge">GOVERNANCE</span>
+                    <h2>How We Maintain Transparency</h2>
+                    <p>Our Advisory Board consists of environmental scientists, urban planners, and community leaders
+                        who ensure our initiatives remain strictly community-focused and data-driven.</p>
+                </div>
+                <div class="faq-static-grid reveal">
+                    <div class="faq-static-card">
+                        <h3><i data-lucide="check-circle"></i> Quarterly Impact Auditing</h3>
+                        <p>We publish a 50-page digital report every 90 days detailing our water usage, soil health
+                            metrics, and community credits distribution.</p>
+                    </div>
+                    <div class="faq-static-card">
+                        <h3><i data-lucide="users"></i> Member-Led Policy</h3>
+                        <p>Every Hub Coordinator has a seat on our Global Council, allowing local needs to drive our
+                            worldwide technological development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Press & Recognition -->
+        <section class="section-padding alternate-bg">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="badge">IN THE NEWS</span>
+                    <h2>Global Recognition</h2>
+                </div>
+                <div class="vision-grid reveal">
+                    <div class="vision-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/BBC_News_2022.svg"
+                            alt="BBC News" style="height: 30px; margin-bottom: 2rem; opacity: 0.7;">
+                        <p>"UrbanRoots is rethinking the city as a biological machine for health."</p>
+                    </div>
+                    <div class="vision-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/The_Guardian_2018.svg"
+                            alt="The Guardian" style="height: 30px; margin-bottom: 2rem; opacity: 0.7;">
+                        <p>"The most scalable community farming tech platform we've seen this decade."</p>
+                    </div>
+                    <div class="vision-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Time_Magazine_logo.svg"
+                            alt="TIME" style="height: 30px; margin-bottom: 2rem; opacity: 0.7;">
+                        <p>"Bridging the gap between high-tech hydroponics and grassroots social connectivity."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Large Vision CTA (Full Width Hub) -->
+        <section class="section-padding" style="background: var(--primary); color: white; text-align: center;">
+            <div class="container reveal">
+                <h2
+                    style="color: white; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; text-align: center; width: 100%;">
+                    Help Us <span class="highlight-white"
+                        style="color: white; border-bottom: 3px solid rgba(255,255,255,0.4);">Seed the Future</span>
+                </h2>
+                <p style="max-width: 800px; margin: 0 auto 3rem; font-size: 1.25rem; opacity: 0.95; line-height: 1.8;">
+                    We are always looking for partners, donors, and urban pioneers who share our vision of a green,
+                    edible city. Join us today to start your first impact garden and reclaim the urban ecosystem.</p>
+                <div class="hero-btns" style="justify-content: center; display: flex; gap: 1.5rem;">
+                    <button class="btn btn-primary btn-lg"
+                        style="background: white; color: var(--primary); min-width: 220px;">Become a Partner</button>
+                    <button class="btn btn-outline btn-lg"
+                        style="color: white; border-color: white; min-width: 220px;">Donate to the Cause</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Exclusive Community Insider (Premium Box) -->
+        <section class="section-padding">
+            <div class="container reveal">
+                <div class="newsletter-box"
+                    style="background: var(--bg-main); border: 2px solid var(--primary); border-radius: 2rem; padding: 4rem; box-shadow: var(--shadow-lg);">
+                    <div class="asymmetric-grid" style="align-items: center; gap: 4rem;">
+                        <div class="reveal">
+                            <span class="badge" style="background: var(--primary-light); color: var(--primary);">STAY
+                                UPDATED</span>
+                            <h2 style="margin: 1.5rem 0 1.5rem;">Join the <span class="highlight">Insider
+                                    Revolution</span></h2>
+                            <p style="color: var(--text-muted); line-height: 1.8; font-size: 1.15rem;">Get bi-weekly
+                                updates on new garden openings, seasonal planting blueprints, and exclusive strategic
+                                chapters from our global pioneers.</p>
+
+                            <!-- Key Benefits Row -->
+                            <div class="key-benefits-row" style="display: flex; gap: 2rem; margin-top: 2.5rem;">
+                                <div class="key-benefit-item"
+                                    style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.9rem; font-weight: 600; color: var(--primary);">
+                                    <i data-lucide="leaf" style="width: 18px; height: 18px;"></i> Weekly Tips
+                                </div>
+                                <div class="key-benefit-item"
+                                    style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.9rem; font-weight: 600; color: var(--primary);">
+                                    <i data-lucide="trending-up" style="width: 18px; height: 18px;"></i> Hub News
+                                </div>
+                                <div class="key-benefit-item"
+                                    style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.9rem; font-weight: 600; color: var(--primary);">
+                                    <i data-lucide="bell" style="width: 18px; height: 18px;"></i> Alerts
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <form class="newsletter-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                <div style="position: relative;">
+                                    <input type="email" placeholder="Your best email address" required
+                                        style="width: 100%; padding: 1.2rem 2.5rem; border-radius: 3rem; border: 1px solid var(--border); font-size: 1rem; background: #f9f9f9;">
+                                    <i data-lucide="mail"
+                                        style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); opacity: 0.5; width: 18px; height: 18px;"></i>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg"
+                                    style="width: 100%; padding: 1.2rem; border-radius: 3rem; font-size: 1.1rem; letter-spacing: 1px; box-shadow: var(--shadow);">Subscribe
+                                    Now</button>
+                                <p
+                                    style="font-size: 0.8rem; text-align: center; color: var(--text-muted); opacity: 0.8;">
+                                    Zero spam. Pure growth. Unsubscribe at any time.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Synchronized) -->
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-top-grid">
+                <!-- Branding Column -->
+                <div class="footer-col branding-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                        </a>
+                    </div>
+                    <p>UrbanRoots is the world's leading community-driven urban farming initiative. We believe in the
+                        power of cities to feed themselves and the power of gardens to heal communities. Join us in
+                        transforming the concrete jungle, one garden at a time.</p>
+                </div>
+
+                <!-- Strategic Links Column (Part of requested 2 columns of options) -->
+                <div class="footer-options-grid">
+                    <div class="footer-col">
+                        <h4>Platform Options</h4>
+                        <ul>
+                            <li><a href="#">Explore Gardens</a></li>
+                            <li><a href="#">Start a Chapter</a></li>
+                            <li><a href="#">Garden Hub Data</a></li>
+                            <li><a href="#">Resource Library</a></li>
+                            <li><a href="#">Member Directory</a></li>
+                            <li><a href="#">Impact Reports</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Strategic Support</h4>
+                        <ul>
+                            <li><a href="#">Corporate Partners</a></li>
+                            <li><a href="#">Council Collaboration</a></li>
+                            <li><a href="#">Sustainability Grants</a></li>
+                            <li><a href="#">Media & PR Kit</a></li>
+                            <li><a href="#">Privacy Framework</a></li>
+                            <li><a href="#">Terms of Growth</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 UrbanRoots Global Initiative. All Rights Reserved. Cultivated with Love.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
