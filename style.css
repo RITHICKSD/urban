@@ -776,6 +776,25 @@ h4 i,
     display: flex;
     align-items: center;
     gap: 0.3rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
 }
 
 .nav-link:hover,
@@ -794,15 +813,40 @@ h4 i,
     left: 50%;
     transform: translate(-50%, 10px);
     background: var(--bg-main);
-    box-shadow: var(--shadow);
-    min-width: 180px;
-    padding: 0.5rem 0;
-    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    min-width: 220px;
+    padding: 0.8rem 0;
+    border-radius: var(--radius-md);
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
     z-index: 1001;
-    text-align: center;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.dropdown-menu li a {
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.dropdown-menu li a:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding-left: 1.8rem; /* Subtle slide effect on hover */
+}
+
+.dropdown-menu li a i {
+    width: 18px;
+    height: 18px;
+    color: var(--primary);
 }
 
 .nav-item:hover .dropdown-menu {
@@ -832,6 +876,16 @@ h4 i,
         visibility: hidden;
         transform: none;
         padding-left: 0;
+        border: none;
+    }
+
+    .dropdown-menu li a {
+        padding: 1rem 2.5rem;
+        border-left: 3px solid transparent;
+    }
+
+    .dropdown-menu li a:hover {
+        padding-left: 2.8rem;
     }
 
     .nav-item.open>.dropdown-menu {
@@ -848,6 +902,25 @@ h4 i,
     }
 
     .mobile-login-item .login-btn {
+        width: 100%;
+    }
+
+    /* Mobile Active State Indicator */
+    .nav-list .nav-link {
+        padding: 1.2rem 2rem;
+        border-left: 4px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .nav-list .nav-link::after {
+        display: none; /* Hide desktop underline */
+    }
+
+    .nav-list .nav-link.active {
+        background: var(--primary-light);
+        border-left-color: var(--primary);
+        color: var(--primary);
+    }
         font-size: 1.25rem !important;
         padding: 1rem 0 !important;
     }

@@ -99,28 +99,51 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = parseFloat(el.getAttribute('data-target'));
         const duration = 2000; // 2 seconds
         const start = 0;
-        let startTime = null;
+        const startTime = performance.now();
 
-        const step = (timestamp) => {
-            if (!startTime) startTime = timestamp;
-            const progress = Math.min((timestamp - startTime) / duration, 1);
+        const update = (now) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
             const current = Math.floor(progress * (target - start) + start);
-
-            // Handle decimals if target is not an integer
-            if (target % 1 !== 0) {
-                el.innerText = (progress * (target - start) + start).toFixed(1);
+            
+            if (target > 1000) {
+                el.innerText = (current / 1000).toFixed(1) + 'k';
             } else {
                 el.innerText = current;
             }
 
             if (progress < 1) {
-                window.requestAnimationFrame(step);
+                requestAnimationFrame(update);
             } else {
-                el.innerText = target; // Ensure it ends exactly on target
+                if (target > 1000) {
+                    el.innerText = (target / 1000).toFixed(1) + 'k';
+                } else {
+                    el.innerText = target;
+                }
             }
         };
-        window.requestAnimationFrame(step);
+        requestAnimationFrame(update);
     };
+
+    // 5. Active Link Highlight Logic
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute("href");
+        if (linkPath === currentPath) {
+            link.classList.add("active");
+            // If inside a dropdown, highlight the parent too
+            const dropdown = link.closest(".dropdown-menu");
+            if (dropdown) {
+                const parentToggle = dropdown.parentElement.querySelector(".nav-dropdown-toggle");
+                if (parentToggle) parentToggle.classList.add("active");
+            }
+        } else {
+            // Remove active if manually set in HTML but not current page
+            link.classList.remove("active");
+        }
+    });
 
     const statNumbers = document.querySelectorAll('.stat-number');
     const statsObserver = new IntersectionObserver((entries) => {
