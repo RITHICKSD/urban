@@ -360,12 +360,12 @@ h4 i,
 
 .stat-card {
     background: var(--bg-main);
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--border);
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.5rem;
     transition: var(--transition);
 }
 
@@ -376,15 +376,16 @@ h4 i,
 }
 
 .stat-icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     background: var(--primary-light);
     color: var(--primary);
-    border-radius: 12px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    flex-shrink: 0;
 }
 
 .stat-icon.alert {
@@ -398,23 +399,57 @@ h4 i,
 }
 
 .stat-value {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 800;
     color: var(--text-main);
+    line-height: 1.2;
 }
 
 .stat-info h3 {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
 }
 
 .chart-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+}
+
+.stat-grid.three-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.chart-grid.two-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1200px) {
+    .stat-grid.three-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .stat-grid.three-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .chart-grid.two-cols {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .stat-grid.three-cols {
+        grid-template-columns: 1fr;
+    }
+    .chart-grid.two-cols {
+        grid-template-columns: 1fr;
+    }
 }
 
 .chart-container {
@@ -643,25 +678,92 @@ h4 i,
     /* Inherit from header */
 }
 
+/* --- New Logo Design --- */
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.logo-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 14px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(45, 90, 39, 0.25);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.logo-icon-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+}
+
+.logo a:hover .logo-icon-container::before {
+    transform: translateX(100%);
+    transition: transform 0.6s ease;
+}
+
+.logo a:hover .logo-icon-container {
+    transform: translateY(-2px) rotate(-3deg);
+    box-shadow: 0 8px 25px rgba(45, 90, 39, 0.35);
+}
+
+.logo-icon-container i {
+    width: 26px;
+    height: 26px;
+    stroke-width: 2.5px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo-text {
     font-family: var(--font-heading);
+    font-size: 1.85rem;
     font-weight: 800;
+    letter-spacing: -0.05em;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.logo-text span {
     color: var(--primary);
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Auth and Dashboard Overrides */
+.auth-logo, .sidebar-header .logo, .top-bar-content .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.85rem !important;
+    text-decoration: none !important;
 }
 
 .logo-img {
-    display: block;
-    max-height: 58px;
-    width: auto;
+    display: none; /* Hide old logo image */
 }
 
-.auth-logo .logo-img {
-    max-height: 58px;
-}
 
 .nav-list {
     display: flex;
@@ -2036,9 +2138,17 @@ h4 i,
 }
 
 .branding-col .logo {
-    color: white;
     margin-bottom: 2rem;
-    font-size: 1.8rem;
+}
+
+#main-footer .logo-text {
+    color: #ffffff;
+}
+
+#main-footer .logo-text span {
+    background: linear-gradient(135deg, #4caf50, #f4d03f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .branding-col p {

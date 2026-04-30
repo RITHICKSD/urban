@@ -9,6 +9,8 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -20,7 +22,10 @@
                 <div class="top-bar-content">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                            <div class="logo-icon-container">
+                                <i data-lucide="leaf"></i>
+                            </div>
+                            <span class="logo-text">Urban<span>Roots</span></span>
                         </a>
                     </div>
                     <!-- Menu Toggle for Mobile -->
@@ -36,8 +41,11 @@
         <aside class="dashboard-sidebar">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="admin-dashboard.html">
-                        <img src="logo.png" alt="UrbanRoots" class="logo-img">
+                    <a href="index.html">
+                        <div class="logo-icon-container">
+                            <i data-lucide="leaf"></i>
+                        </div>
+                        <span class="logo-text">Urban<span>Roots</span></span>
                     </a>
                 </div>
             </div>
@@ -78,7 +86,7 @@
                 </div>
 
                 <!-- Admin KPI Grid -->
-                <div class="stat-grid six-cols">
+                <div class="stat-grid three-cols">
                     <div class="stat-card">
                         <div class="stat-icon"><i data-lucide="users-2"></i></div>
                         <div class="stat-info">
