@@ -70,12 +70,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. RTL / LTR Toggle Logic
     const rtlToggle = document.getElementById('rtl-toggle');
+    
+    const updateRtlUI = (dir) => {
+        htmlElement.setAttribute('dir', dir);
+        htmlElement.setAttribute('lang', dir === 'rtl' ? 'ar' : 'en');
+        if (rtlToggle) {
+            rtlToggle.textContent = dir === 'rtl' ? 'RTL' : 'LTR';
+        }
+        localStorage.setItem('urban-roots-direction', dir);
+    };
+
+    // Persistence Check for Direction
+    const savedDir = localStorage.getItem('urban-roots-direction') || 'ltr';
+    updateRtlUI(savedDir);
+
     if (rtlToggle) {
         rtlToggle.addEventListener('click', () => {
             const currentDir = htmlElement.getAttribute('dir');
             const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
-            htmlElement.setAttribute('dir', newDir);
-            htmlElement.setAttribute('lang', newDir === 'rtl' ? 'ar' : 'en'); // Simplified lang switch for demo
+            updateRtlUI(newDir);
         });
     }
 

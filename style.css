@@ -943,10 +943,43 @@ h4 i,
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
-.header-controls button {
+.btn-toggle {
+    width: 42px;
+    height: 42px;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0;
+    font-family: var(--font-heading);
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+}
+
+.btn-toggle:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.btn-toggle i {
+    width: 20px;
+    height: 20px;
+}
+
+.header-controls button:not(.btn-toggle) {
     background: none;
     border: none;
     cursor: pointer;
@@ -954,12 +987,12 @@ h4 i,
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: 10px;
     border-radius: 50%;
     transition: var(--transition);
 }
 
-.header-controls button:hover {
+.header-controls button:not(.btn-toggle):hover {
     background: var(--primary-light);
     color: var(--primary);
 }
