@@ -2,8 +2,9 @@
 // Mobile dropdown toggle logic
 document.addEventListener('DOMContentLoaded', function () {
     function isMobile() {
-        return window.innerWidth <= 900;
+        return window.innerWidth <= 1024;
     }
+
     const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
     dropdownToggles.forEach(function (toggle) {
         toggle.addEventListener('click', function (e) {
@@ -153,10 +154,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (parentToggle) parentToggle.classList.add("active");
             }
         } else {
-            // Remove active if manually set in HTML but not current page
             link.classList.remove("active");
         }
     });
+
+    const sidebarLinks = document.querySelectorAll(".sidebar-link");
+    sidebarLinks.forEach(link => {
+        const linkPath = link.getAttribute("href");
+        if (linkPath === currentPath) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+
 
     const statNumbers = document.querySelectorAll('.stat-number');
     const statsObserver = new IntersectionObserver((entries) => {

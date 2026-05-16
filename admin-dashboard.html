@@ -78,10 +78,38 @@
         <!-- Main Content -->
         <main class="dashboard-main">
             <div class="container">
-                <div class="dashboard-header">
-                    <h1>Admin Command Center</h1>
-                    <p>Global oversight of UrbanRoots operations.</p>
+                <div class="dashboard-top-nav" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem; gap: 2rem;">
+                    <div class="dashboard-actions" style="display: flex; gap: 1rem;">
+                        <button class="btn-toggle" title="System Alerts"><i data-lucide="shield-alert"></i><span class="badge-dot" style="position: absolute; top: 5px; right: 5px; width: 8px; height: 8px; background: #f39c12; border-radius: 50%;"></span></button>
+                        <button class="btn-toggle" title="Global Messages"><i data-lucide="mail"></i></button>
+                    </div>
+                    <div class="user-profile-section">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=100" alt="Admin Avatar" class="user-avatar">
+                        <div class="user-info-text">
+                            <span class="user-name">Marcus Thorne</span>
+                            <span class="user-role">System Administrator</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="dashboard-header" style="text-align: left; margin-bottom: 3rem;">
+                    <h1>Admin command Center</h1>
+                    <p>Global oversight and system-wide management of UrbanRoots operations.</p>
+                </div>
+
+                <!-- Admin Notification Center -->
+                <div class="alerts-section">
+                    <div class="alert-item" style="background: rgba(52, 152, 219, 0.1); border-left: 4px solid #3498db; padding: 1rem 1.5rem; border-radius: 8px; display: flex; align-items: center; gap: 1rem;">
+                        <i data-lucide="info" style="color: #3498db;"></i>
+                        <span style="color: #3498db; font-weight: 600;">System backup completed successfully at 02:00 AM.</span>
+                    </div>
+                    <div class="alert-item" style="background: rgba(243, 156, 18, 0.1); border-left: 4px solid #f39c12; padding: 1rem 1.5rem; border-radius: 8px; display: flex; align-items: center; gap: 1rem;">
+                        <i data-lucide="help-circle" style="color: #f39c12;"></i>
+                        <span style="color: #f39c12; font-weight: 600;">12 pending garden certifications require review.</span>
+                    </div>
+                </div>
+
+
 
                 <!-- Admin KPI Grid -->
                 <div class="stat-grid three-cols">
@@ -187,11 +215,18 @@
                             maintainAspectRatio: false,
                             plugins: {
                                 legend: {
-                                    position: 'bottom',
-                                    labels: { font: { size: 10 }, padding: 8, boxWidth: 10 }
+                                    position: window.innerWidth <= 768 ? 'bottom' : 'right',
+                                    labels: { color: '#666', font: { size: 11, weight: '600' }, usePointStyle: true, padding: window.innerWidth <= 768 ? 8 : 15 }
+                                },
+
+                                tooltip: {
+                                    callbacks: {
+                                        label: (context) => ` ${context.label}: ${context.raw}% Share`
+                                    }
                                 }
                             }
                         }
+
                     });
                 };
 

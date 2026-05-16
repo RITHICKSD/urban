@@ -77,10 +77,34 @@
         <!-- Main Content -->
         <main class="dashboard-main">
             <div class="container">
-                <div class="dashboard-header">
-                    <h1>Welcome to Your Dashboard</h1>
-                    <p>Manage your urban farming activities here.</p>
+                <div class="dashboard-top-nav" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem; gap: 2rem;">
+                    <div class="dashboard-actions" style="display: flex; gap: 1rem;">
+                        <button class="btn-toggle" title="Alerts"><i data-lucide="bell"></i><span class="badge-dot" style="position: absolute; top: 5px; right: 5px; width: 8px; height: 8px; background: #e74c3c; border-radius: 50%;"></span></button>
+                        <button class="btn-toggle" title="Messages"><i data-lucide="message-square"></i></button>
+                    </div>
+                    <div class="user-profile-section">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="User Avatar" class="user-avatar">
+                        <div class="user-info-text">
+                            <span class="user-name">Jane Cooper</span>
+                            <span class="user-role">Urban Pioneer</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="dashboard-header" style="text-align: left; margin-bottom: 3rem;">
+                    <h1>Pioneer Overview</h1>
+                    <p>Track your garden's growth and environmental impact.</p>
+                </div>
+
+                <!-- Active Alerts Section -->
+                <div class="alerts-section">
+                    <div class="alert-item" style="background: rgba(231, 76, 60, 0.1); border-left: 4px solid #e74c3c; padding: 1rem 1.5rem; border-radius: 8px; display: flex; align-items: center; gap: 1rem;">
+                        <i data-lucide="alert-circle" style="color: #e74c3c;"></i>
+                        <span style="color: #e74c3c; font-weight: 600;">Water levels low in Hub #4. Please check irrigation.</span>
+                    </div>
+                </div>
+
+
 
                 <!-- Stat Cards Grid (6 cards) -->
                 <div class="stat-grid three-cols">
@@ -161,11 +185,51 @@
     </div>
 
     <script src="script.js"></script>
-    <script nonce="dashboard-icons">
-        if (window.lucide) {
-            lucide.createIcons();
-        }
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof Chart !== 'undefined') {
+                const initPieChart = (id, labels, data, colors) => {
+                    const ctx = document.getElementById(id);
+                    if (!ctx) return;
+                    new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                            labels: labels,
+                            datasets: [{
+                                data: data,
+                                backgroundColor: colors,
+                                borderWidth: 0
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: window.innerWidth <= 768 ? 'bottom' : 'right',
+                                    labels: { color: '#666', font: { size: 12, weight: '600' }, usePointStyle: true, padding: window.innerWidth <= 768 ? 10 : 20 }
+                                },
+
+                                tooltip: {
+                                    callbacks: {
+                                        label: (context) => ` ${context.label}: ${context.raw}%`
+                                    }
+                                }
+                            }
+                        }
+                    });
+                };
+
+                const userColors = ['#2d5a27', '#4caf50', '#81c784', '#a5d6a7'];
+                initPieChart('pie-chart-1', ['Leafy Greens', 'Root Veg', 'Herbs', 'Fruits'], [35, 25, 20, 20], userColors);
+                initPieChart('pie-chart-2', ['Nitrogen', 'Phos', 'Potash', 'pH'], [40, 20, 30, 10], userColors);
+                initPieChart('pie-chart-3', ['Growing', 'Ready', 'Late', 'Dormant'], [50, 30, 10, 10], userColors);
+                initPieChart('pie-chart-4', ['Spring', 'Summer', 'Autumn', 'Winter'], [25, 35, 20, 20], userColors);
+            }
+            if (window.lucide) lucide.createIcons();
+        });
     </script>
+
 </body>
 
 </html>

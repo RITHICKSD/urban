@@ -20,9 +20,11 @@
         /* Home 2 Specific Layout Overrides */
         .hero-v2 {
             min-height: 90vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1591189863430-ab87e1206e7e?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('u9.jpg'), url('u8.jpg');
+            background-size: cover, cover;
+            background-position: center, center;
+            background-blend-mode: overlay;
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -155,11 +157,11 @@
                 <h1>Building Cities <span class="highlight">That Feed Us</span></h1>
                 <p>We are a global collective of urban farmers, planners, and visionaries transforming rooftops and
                     vacant lots into thriving high-yield ecosystems.</p>
-                <div class="hero-btns" style="justify-content: center;">
-                    <button class="btn btn-primary btn-lg">Explore Local Hubs</button>
-                    <button class="btn btn-outline btn-lg" style="color: white; border-color: white;">Download
-                        Blueprints</button>
+                <div class="hero-btns" style="justify-content: center; display: flex; gap: 1rem;">
+                    <button class="btn btn-primary btn-lg" style="height: 55px;">Explore Local Hubs</button>
+                    <button class="btn btn-outline btn-lg" style="color: white; border-color: white; height: 55px;">Download Blueprints</button>
                 </div>
+
             </div>
         </section>
 
@@ -210,7 +212,8 @@
         </section>
 
         <!-- Section 4: Live Impact Metrics -->
-        <section id="impact" class="section-padding alternate-bg">
+        <section id="impact" class="section-padding impact-v2 alternate-bg">
+
             <div class="container">
                 <div class="section-header reveal">
                     <span class="badge">THE IMPACT</span>
@@ -289,17 +292,28 @@
             </div>
         </section>
 
-        <!-- Section 6: Full Width Image (Parallax Placeholder) -->
-        <section class="section-padding alternate-bg" style="padding-top: 0; padding-bottom: 0;">
-            <div class="reveal" style="height: 450px; overflow: hidden; position: relative;">
-                <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&q=80&w=2000"
-                    alt="Large Backdrop" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7);">
-                <div
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
-                    <h2 style="font-size: clamp(2rem, 5vw, 4rem); color: white;">Where Innovation Meets the Earth</h2>
+        <!-- Section 6: Improved Last Section -->
+        <section class="section-padding alternate-bg" style="padding: 6rem 0; background: var(--bg-main);">
+            <div class="container">
+                <div class="asymmetric-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div class="reveal">
+                        <span class="badge">Join the Movement</span>
+                        <h2>A Global Vision for Urban Food Security</h2>
+                        <p>Our mission extends beyond individual gardens. We are building a global network of resilient urban ecosystems that can withstand climate challenges and provide nutritional sovereignty to city dwellers everywhere.</p>
+                        <ul style="margin: 2rem 0; list-style: none; padding: 0;">
+                            <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;"><i data-lucide="check-circle" style="color: var(--primary);"></i> Global Knowledge Sharing</li>
+                            <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;"><i data-lucide="check-circle" style="color: var(--primary);"></i> Standardized Open-Source Blueprints</li>
+                            <li style="display: flex; align-items: center; gap: 1rem;"><i data-lucide="check-circle" style="color: var(--primary);"></i> Collaborative Policy Advocacy</li>
+                        </ul>
+                        <button class="btn btn-primary">Download Our Vision 2030</button>
+                    </div>
+                    <div class="reveal" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg);">
+                        <img src="u10.jpg" alt="Future Urban Vision" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                 </div>
             </div>
         </section>
+
 
     </main>
 
@@ -320,7 +334,13 @@
                     <p>UrbanRoots is the world's leading community-driven urban farming initiative. We believe in the
                         power of cities to feed themselves and the power of gardens to heal communities. Join us in
                         transforming the concrete jungle, one garden at a time.</p>
+                    <div class="footer-contact-info" style="margin-top: 1.5rem;">
+                        <p style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;"><i data-lucide="phone" style="width: 18px; color: var(--primary);"></i> +1 (555) 987-6543</p>
+                        <p style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;"><i data-lucide="mail" style="width: 18px; color: var(--primary);"></i> hub@urbanroots.org</p>
+                        <p style="display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="map-pin" style="width: 18px; color: var(--primary);"></i> 456 Urban Plaza, Metro City, NY 10002</p>
+                    </div>
                 </div>
+
 
                 <!-- Strategic Links Column (Part of requested 2 columns of options) -->
                 <div class="footer-options-grid">
